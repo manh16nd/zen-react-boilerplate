@@ -16,7 +16,7 @@ ProtectedRoute.defaultProps = {
 }
 
 ProtectedRoute.propTypes = {
-    component: PropTypes.object.isRequired,
+    component: PropTypes.func.isRequired,
     path: PropTypes.string.isRequired,
     exact: PropTypes.bool,
 }

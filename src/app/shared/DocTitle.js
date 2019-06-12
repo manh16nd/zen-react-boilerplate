@@ -1,6 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
+import { getReactEnv } from '../../services/env/getEnv'
+
+const defaultTitle = getReactEnv('APP_NAME')
 
 const DocTitle = function (props) {
     const { title } = props
@@ -8,13 +11,13 @@ const DocTitle = function (props) {
     return (
         <Helmet>
             <meta charSet="utf-8" />
-            <title>{title} | FulfillHub</title>
+            <title>{`${title} | ${defaultTitle}`}</title>
         </Helmet>
     )
 }
 
 DocTitle.defaultProps = {
-    title: 'FulfillHub',
+    title: defaultTitle,
 }
 
 DocTitle.propTypes = {
