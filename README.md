@@ -16,3 +16,7 @@ Customize your app in .env file
 `REACT_APP_APP_NAME` is your app name 
 
 `PORT` is the port your server running on
+
+```
+Hacktoberfest19
+```
